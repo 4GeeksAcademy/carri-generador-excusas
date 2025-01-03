@@ -1,13 +1,13 @@
 window.addEventListener = function() {
-  let who = ["The dog", "My grandma", "The mailman", "My bird"];
-  let action = ["ate", "peed", "crushed", "broke"];
-  let what = ["my homework", "my phone", "the car"];
+  let who = ["El perro", "Mi abuela", "El cartero", "Mi pájaro"];
+  let action = ["comió", "hizo pis", "aplastó", "rompió"];
+  let what = ["mi tarea", "mi teléfono", "el coche"];
   let when = [
-    "before the class",
-    "when I was sleeping",
-    "while I was exercising",
-    "during my lunch",
-    "while I was praying",
+    "antes de la clase",
+    "cuando estaba durmiendo",
+    "mientras hacía ejercicio",
+    "durante mi almuerzo",
+    "mientras estaba rezando"
   ];
 
   let numeroRandom1 = Math.floor(Math.random() * who.length);
@@ -17,7 +17,10 @@ window.addEventListener = function() {
 
   document.querySelector("#excusa").innerHTML =
     who[numeroRandom1] +
+    " " +
     action[numeroRandom2] +
+    " " +
     what[numeroRandom3] +
+    " " +
     when[numeroRandom4];
 };

@@ -1,26 +1,21 @@
-window.addEventListener = function() {
-  let who = ["El perro", "Mi abuela", "El cartero", "Mi pájaro"];
-  let action = ["comió", "hizo pis", "aplastó", "rompió"];
-  let what = ["mi tarea", "mi teléfono", "el coche"];
-  let when = [
-    "antes de la clase",
-    "cuando estaba durmiendo",
-    "mientras hacía ejercicio",
-    "durante mi almuerzo",
-    "mientras estaba rezando"
+document.addEventListener("DOMContentLoaded", () => {
+  const subjects = ["The dog", "My grandmother", "The mailman", "My bird"];
+  const actions = ["ate", "peed on", "crushed", "broke"];
+  const objects = ["my homework", "my phone", "the car"];
+  const times = [
+    "before class",
+    "while I was sleeping",
+    "while I was exercising",
+    "during my lunch",
+    "while I was praying"
   ];
 
-  let numeroRandom1 = Math.floor(Math.random() * who.length);
-  let numeroRandom2 = Math.floor(Math.random() * action.length);
-  let numeroRandom3 = Math.floor(Math.random() * what.length);
-  let numeroRandom4 = Math.floor(Math.random() * when.length);
+  const getRandomElement = array =>
+    array[Math.floor(Math.random() * array.length)];
 
-  document.querySelector("#excusa").innerHTML =
-    who[numeroRandom1] +
-    " " +
-    action[numeroRandom2] +
-    " " +
-    what[numeroRandom3] +
-    " " +
-    when[numeroRandom4];
-};
+  document.querySelector("#excuse").textContent = `${getRandomElement(
+    subjects
+  )} ${getRandomElement(actions)} ${getRandomElement(
+    objects
+  )} ${getRandomElement(times)}`;
+});
